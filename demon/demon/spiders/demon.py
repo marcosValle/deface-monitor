@@ -14,12 +14,13 @@ class DemonSpider(CrawlSpider):
     ]
 
     rules = (
-        # Extract links matching 'item.php' and parse them with the spider's method parse_item
+        # Extract all links and process them with parse_items
         Rule(LinkExtractor(allow=()), callback='parse_items'),
     )
 
     def parse_items(self, response):
         item = DemonItem()
         item['link'] = response.xpath('//a/@href').extract()
+        item['content'] = response.xpath('//body//text()').extract()
         return item
 
