@@ -1,6 +1,10 @@
 #DeMon
 ##Open-source website defacement monitoring tool
 
+This tool crawls through a user specified set of domains, starting from a user specified URL, following all the unrestricted links it founds. For each page it crawls, DeMon searches in a premade wordlist for malicious words that might indicate a defacement.
+
+In the future it is intended to search also for defacement JS and images, according to a database. Also, automatic emails to admins are intended to be implemented soon.
+
 This tool was developed using Python3.5.2 and Scrapy. It is strongly advised to create a virtualenvironment before using it.
 
 So far this tool is being developed and **should not be trusted in production**.
