@@ -11,27 +11,30 @@ import os.path
 class DemonPipeline(object):
     def __init__(self):
         basepath = os.path.dirname(__file__)
-        urlsfilepath = os.path.abspath(os.path.join("..", "..", "..", basepath, "urls.txt"))
-        omgfilepath = os.path.abspath(os.path.join("..", "..", "..", basepath, "omg.txt"))
+        urlsfilepath = os.path.abspath(os.path.join("..", "..", "..", basepath, "logs", "urls.txt"))
+        omgfilepath = os.path.abspath(os.path.join("..", "..", "..", basepath, "logs", "omg.txt"))
         wlfilepath = os.path.abspath(os.path.join("..", "..", "..","..", basepath, "..", "wordlist.txt"))
 
-        self.urls = open(urlsfilepath, 'a')
-        self.omg = open(omgfilepath, 'a')
+        self.urls = open(urlsfilepath, 'w')
+        self.omg = open(omgfilepath, 'w')
         self.wl = open(wlfilepath, 'r')  
 
     def process_item(self, item, spider):
 #TODO: last url is not being correctly processed
+#TODO: un-hardcode this damn url!
         for l in item['link']:
             if "http://" not in l or "https://" not in l:
                 l = "http://www.marinha.mil.br"+l
             self.urls.write(l+"\n")
 
 # Process page text content
-        for c in item['content']:
-            for w in self.wl:
-                if w in c:
-                    self.omg.write('OMG!!!!! HACKED SITE!!!! GEEE MAN!!!')
-#                self.omg.write(item['link'])
+        contentWords = [i.strip() for i in item['content']]
+        wordList = self.wl.read().split()
+#        any_in = lambda wordList, contentWords: any(i in contentWords for i in wordList)
+        any_in = lambda a,b: any(i in b for i in a)
+        if any_in(wordList, contentWords):
+            self.omg.write('OMG!!!!! HACKED SITE!!!! GEEE MAN!!!')
+            self.omg.write(''.join(str(i) for i in item['link']))
         return item
 
 

@@ -8,9 +8,9 @@ import sys
 
 class DemonSpider(CrawlSpider):
     name = "mar"
-    allowed_domains = ["mil.br", "eb.br", "mar.br"]
+    allowed_domains = ["marinha.mil.br"]
     start_urls = [
-        "http://www.marinha.mil.br"
+            "http://www.marinha.mil.br"
     ]
 
     rules = (
