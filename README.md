@@ -39,10 +39,14 @@ Finally, run, baby, run:
     $python3 run.py
     
 ###TODO
-* Finish wordlist detection code
-* Pass URL, domain and name as parameters
-* Implement Scrapy's e-mail functionalities
-* Monitor images and codes
+
+* Phase 1
+    ** Fix urls.txt to store visited links
+    ** Finish wordlist detection code
+    ** Pass URL, domain and name as parameters
+    ** Implement Scrapy's e-mail functionalities
+* Phase 2
+    ** Monitorate images and codes (JS)
 
 ###Disclaimer
 This tool should not be used without authorization or against military/governmental websites.
