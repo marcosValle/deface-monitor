@@ -1,0 +1,25 @@
+version: '2'
+services:
+# TODO: Fix startup container order (neo4j first)
+  neo4j:
+          image: "neo4j:latest"
+          ports: 
+                - "7474:7474"
+                - "7687:7687"
+          volumes:
+                - $HOME/neo4j/data:/data
+                - $HOME/neo4j/logs:/logs
+  monitor:
+    build: monitor
+    volumes:
+     - ./monitor:/monitor
+  graph:
+    build: graph
+    volumes:
+     - ./graph:/graph
+# create a .env file and put:
+#       NEO4J_ID=your_id
+#       NEO4J_PWD=your_pwd
+    environment:
+            - NEO4J_ID=${NEO4J_ID}
+            - NEO4J_PWD=${NEO4J_PWD}
