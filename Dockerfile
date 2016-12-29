@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Marcos Valle "marcosvalle@protonmail.com"
 RUN apt-get update -y && apt-get install -y \
-    python-pip \
-    python-dev \
+    python3-pip \
+    python3-dev \
     build-essential
 COPY . /deface-monitor
 WORKDIR /deface-monitor
