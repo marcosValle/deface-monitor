@@ -18,6 +18,7 @@ class DemonSpiderTest(unittest.TestCase):
         
         for key, value in results.items():
             self.assertIsNotNone(value)
+            print(key, value)
     
     def test_parse(self):
         ''' Testing if the spider parsing is done correctly over a fake offline response
@@ -43,6 +44,10 @@ class DemonPipelinesTest(unittest.TestCase):
         omgPath = 'demon/logs/omg.txt'
         #check if omg.txt is empty
         self.assertFalse(os.stat(omgPath).st_size)
+
+    def test_hacked(self):
+        '''Testing if accusing a simple hacked page
+        '''
        
 #Calling the tests
 suite = unittest.TestLoader().loadTestsFromTestCase(DemonSpiderTest)
