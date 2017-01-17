@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.2"
+  - "3.3"
+# command to install dependencies
+script: python monitor/tests.py
+branches:
+  only:
+    - master
+
