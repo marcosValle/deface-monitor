@@ -4,7 +4,7 @@ python:
   - "3.4"
   - "3.5"
 # command to install dependencies
-script: python -m unittest monitor.tests.test_scrapy
+script: cd monitor && python -m unittest tests.test_scrapy
 branches:
   only:
     - master
