@@ -47,7 +47,7 @@ unattended-upgrades==0.1
 urllib3==1.13.1
 usb-creator==0.3.0
 virtualenv==15.0.1
-w3lib==1.15.0
+w3lib==1.16.0
 xdiagnose==3.8.4.1
 xkit==0.0.0
 zope.interface==4.3.2
