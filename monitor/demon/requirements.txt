@@ -9,7 +9,7 @@ cryptography==1.7.1
 cssselect==1.0.1
 defer==1.0.6
 html5lib==0.999999999
-idna==2.1
+idna==2.2
 language-selector==0.1
 louis==2.6.4
 lxml==3.7.2
