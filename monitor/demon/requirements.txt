@@ -14,7 +14,7 @@ language-selector==0.1
 louis==2.6.4
 lxml==3.7.2
 parsel==1.1.0
-pexpect==4.0.1
+pexpect==4.2.1
 Pillow==4.0.0
 ptyprocess==0.5
 pyasn1==0.1.9
