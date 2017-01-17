@@ -27,7 +27,7 @@ PyDispatcher==2.0.5
 pygobject==3.20.0
 pyOpenSSL==16.2.0
 python-apt==1.1.0b1
-python-debian==0.1.27
+python-debian==0.1.28
 python-systemd==231
 pyxdg==0.25
 queuelib==1.4.2
