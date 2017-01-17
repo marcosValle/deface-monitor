@@ -44,7 +44,7 @@ Twisted==16.6.0
 ubuntu-drivers-common==0.0.0
 ufw==0.35
 unattended-upgrades==0.1
-urllib3==1.13.1
+urllib3==1.19.1
 usb-creator==0.3.0
 virtualenv==15.0.1
 w3lib==1.16.0
