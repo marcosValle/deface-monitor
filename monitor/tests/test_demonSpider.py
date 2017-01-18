@@ -28,9 +28,9 @@ class DemonSpiderTest(unittest.TestCase):
 
 class DemonPipelinesTest(unittest.TestCase):
     def setUp(self):
-        self.pipeline = pipelines.DemonPipeline()
         self.spider = demon.DemonSpider()
         self.results = self.spider.parse_items(fake_response_from_file("sample.html"))
+        self.pipeline = pipelines.DemonPipeline()
         self.item = self.pipeline.process_item(self.results, self.spider)
 
     def test_process_item(self):
@@ -41,14 +41,26 @@ class DemonPipelinesTest(unittest.TestCase):
     def test_urls_txt(self):
         ''' Testing if inspected urls are being correctly logged
         '''
-        omgPath = 'demon/logs/omg.txt'
-        #check if omg.txt is empty
-        self.assertFalse(os.stat(omgPath).st_size)
+        urlsPath = 'demon/logs/urls.txt'
+        #check if urls.txt is empty
+        self.assertNotEqual(os.stat(urlsPath).st_size, 0)
+
+        with open(urlsPath) as f:
+            content = f.readlines()
+            print(content)
 
     def test_hacked(self):
         '''Testing if accusing a simple hacked page
         '''
-       
+        omgPath = 'demon/logs/omg.txt'
+
+        with open(omgPath) as f:
+            content = f.readlines()
+            print(content)
+
+        #check if omg.txt shows an alert
+        self.assertNotEqual(os.stat(omgPath).st_size, 0)
+
 #Calling the tests
 suite = unittest.TestLoader().loadTestsFromTestCase(DemonSpiderTest)
 unittest.TextTestRunner(verbosity=2).run(suite)
