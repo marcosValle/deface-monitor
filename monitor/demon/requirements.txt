@@ -15,7 +15,7 @@ louis==2.6.4
 lxml==3.5.0
 parsel==1.0.3
 pexpect==4.0.1
-Pillow==3.1.2
+Pillow==8.1.1
 ptyprocess==0.5
 pyasn1==0.1.9
 pyasn1-modules==0.0.8
