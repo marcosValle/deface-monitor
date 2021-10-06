@@ -11,7 +11,7 @@ pycparser==2.16
 PyDispatcher==2.0.5
 pyOpenSSL==17.5.0
 queuelib==1.4.2
-Scrapy==1.2.0
+Scrapy==1.8.1
 service-identity==16.0.0
 six==1.10.0
 Twisted==20.3.0
