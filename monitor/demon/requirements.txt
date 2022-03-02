@@ -34,7 +34,7 @@ queuelib==1.4.2
 r2pipe==0.8.8
 reportlab==3.3.0
 requests==2.20.0
-Scrapy==1.2.0
+Scrapy==1.8.2
 service-identity==16.0.0
 sessioninstaller==0.0.0
 six==1.10.0
