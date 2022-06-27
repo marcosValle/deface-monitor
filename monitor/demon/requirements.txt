@@ -32,7 +32,7 @@ python-systemd==231
 pyxdg==0.25
 queuelib==1.4.2
 r2pipe==0.8.8
-reportlab==3.3.0
+reportlab==3.5.55
 requests==2.20.0
 Scrapy==1.2.0
 service-identity==16.0.0
