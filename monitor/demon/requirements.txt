@@ -12,7 +12,7 @@ html5lib==0.999
 idna==2.1
 language-selector==0.1
 louis==2.6.4
-lxml==4.6.3
+lxml==4.9.1
 parsel==1.0.3
 pexpect==4.0.1
 Pillow==8.3.2
